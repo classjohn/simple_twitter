@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= link_to '트위터 홈', root_path %>
 <% if user_signed_in? %>
   <%= link_to '로그아웃', destroy_user_session_path, method: :delete %>
   <%= current_user.email %>님 환영합니다.

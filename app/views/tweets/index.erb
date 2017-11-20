@@ -2,6 +2,9 @@
 <% @tweets.each do |t| %>
 제목 : <%= t.title %><br>
 내용 : <%= t.content %><br>
+글쓴이 : <%= t.user.email if t.user %><br>
+사진 : <%= image_tag t.photo_url %><br>
+
 <%= link_to '트윗보기', "/tweets/#{t.id}" %><br>
 <% end %>
 <%= paginate(@tweets) %>

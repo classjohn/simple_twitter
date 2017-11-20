@@ -2,5 +2,7 @@
 <%= form_for(@tweet) do |f| %>
   제목 : <%= f.text_field :title %><br>
   내용 : <%= f.text_field :content %><br>
+  사진업로드 : <%= f.file_field :photo_url %><br>
+  <%= f.hidden_field :user_id, value: current_user.id %>
   <%= f.submit "트윗하기"%>
 <% end %>
