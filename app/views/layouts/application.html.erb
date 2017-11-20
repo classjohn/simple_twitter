@@ -7,6 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if user_signed_in? %>
+  <%= link_to '로그아웃', destroy_user_session_path, method: :delete %>
+  <%= current_user.email %>님 환영합니다.
+<% else %>
+  <%= link_to '로그인', new_user_session_path %>
+<% end %>
+<%= link_to '새트윗 만들기', new_tweet_path %>
+
+<p class="notice"><%= flash[:notice] %></p>
+<p class="alert"><%= flash[:alert] %></p>
 
 <%= yield %>
 
