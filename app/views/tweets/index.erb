@@ -1,0 +1,7 @@
+<h1>트위터 목록</h1>
+<% @tweets.each do |t| %>
+제목 : <%= t.title %><br>
+내용 : <%= t.content %><br>
+<%= link_to '트윗보기', "/tweets/#{t.id}" %><br>
+<% end %>
+<%= paginate(@tweets) %>

@@ -1,0 +1,8 @@
+<h1>글쓰기</h1>
+<%= form_for(@post) do |f| %>
+  제목 : <%= f.text_field :title  %><br>
+  내용 : <%= f.text_field :content  %><br>
+  이미지 : <%= f.text_field :image_url %><br>
+  공개/비공개 : <%= f.text_field :is_active %><br>
+  <%= f.submit "글쓰기" %>
+<% end %>

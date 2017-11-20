@@ -1,0 +1,6 @@
+<h1>트윗수정하기</h1>
+<%= form_for(@tweet) do |f| %>
+  제목 : <%= f.text_field :title %><br>
+  내용 : <%= f.text_field :content %><br>
+  <%= f.submit "트윗하기"%>
+<% end %>
